@@ -91,6 +91,27 @@
     margin-bottom: 10px;
 
 }
+.country input{
+    /* width: 85%; */
+}
+.country{
+    position: relative;
+}
+.country select{
+    padding: 5px;
+    background-color: rgb(237,242,247);
+    border: none;
+    box-sizing: border-box;
+    height: 9vh;
+    width: 100px;
+    margin: auto;
+}
+.country option{
+    background-color: red;
+    width: 200px;
+    position: absolute;
+    font-size: 58px;
+}
 .email input:focus{
     outline: none;
 }

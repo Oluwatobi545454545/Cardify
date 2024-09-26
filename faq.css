@@ -32,8 +32,9 @@ nav {
     /* flex-wrap: wrap; */
     justify-content: space-around;
     align-items: center;
-    padding: 18px 215px;
-    background-color: white;
+    padding: 18px 230px;
+    background-color: transparent;
+    width: 100%;
     gap: 50px;
 }
 
@@ -47,9 +48,7 @@ nav {
 .logos img {
     width: 25%;
     /* max-width: 100%; */
-    height: auto;
-    object-fit: cover;
-    image-rendering: crisp-edges;
+    /* height: auto; */
 }
 
 .home {
@@ -113,6 +112,7 @@ nav {
     top: 35px;
     padding: 30px 30px;
     border-radius: 20px;
+    z-index: 100;
     position: absolute;
     display: none;
     gap: 20px;
@@ -151,6 +151,215 @@ nav {
     margin-bottom: 33px;
     width: 220px;
     /* width: 400px; */
+}
+.lists{
+    display: none;
+    /* width: 50%; */
+    height: 30px;
+    /* border: 1px solid; */
+}
+.menu-btn {
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* position: fixed; */
+    top: 10px;
+    right: 10px;
+    /* z-index: 1000; */
+    border-radius: 4px;
+    user-select: none;
+}
+.menu-btn:hover{
+    background-color:  rgb(6,155,64);
+    color: white;
+}
+.topic{
+    font-size: 18px;
+}
+#menuToggle {
+    display: none;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -600px;
+    min-width: 350px;
+    width: max-content;
+    height: 100%;
+    background-color: white;
+    padding-top: 40px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+/* Slide-in effect when the checkbox is checked */
+#menuToggle:checked+.menu-btn+.side-menu {
+    left: 0;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+.cancel-btn:hover{
+    color: rgb(6,155,64);
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.dropdown2 li{
+    border-bottom: 1px solid white;
+}
+
+.side-menu ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.side-menu ul li a:hover {
+    color: rgb(6,155,64);
+}
+
+.dropdown2 {
+    display: none;
+    padding-left: 20px;
+}
+
+.side-menu ul li a:focus-within+.dropdown2,
+.side-menu ul li:focus-within .dropdown2 {
+    display: block;
+}
+
+.signin1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.signin3 {
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 10px;
+    color: black;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.freeacc2 {
+    width: 100%;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    padding-left: 20px;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+    .side-menu ul li {
+        padding: 10px;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-btn {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    .side-menu {
+        min-width: 100%;
+    }
+
+    .side-menu ul li {
+        padding: 8px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    .logos img{
+       min-width: 60%;
+       margin-left: -30px;
+    }
+}
+@media (max-width: 990px) {
+    .signin {
+        flex-direction: column;
+        /* Stack signin buttons */
+        gap: 10px;
+        /* Space between buttons */
+        display: none;
+    }
+    .home{
+        display: none;
+    }
+    .lists{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+@media (max-width: 1115px) {
+    nav {
+        padding: 18px 50px;
+    }
+    .page1 {
+        padding: 0px 0%;
+    }
 }
 
 hr {
@@ -193,9 +402,6 @@ hr {
 @media (max-width: 768px) {
     .page5 {
         padding: 50px 30px;
-    }
-    nav{
-        display: none;
     }
     .blogall {
         width: 100%;

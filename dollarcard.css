@@ -27,38 +27,42 @@ body {
 }
 
 nav {
-    display: none;
+    display: flex;
     min-height: 10vh;
     /* flex-wrap: wrap; */
     justify-content: space-around;
     align-items: center;
-    padding: 18px 215px;
+    padding: 18px 230px;
     background-color: rgb(16,178,89);
+    width: 100%;
+    gap: 50px;
 }
 
 .logos {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .logos img {
-    width: 35%;
+    width: 25%;
     /* max-width: 100%; */
-    height: auto;
-    object-fit: cover;
-    image-rendering: crisp-edges;
+    /* height: auto; */
 }
 
 .home {
     display: flex;
     gap: 25px;
 }
-
-.home a {
+.doll {
     text-decoration: none;
     color: white;
+    font-size: 15px;
+}
+.doll2 {
+    text-decoration: none;
+    color: black;
     font-size: 15px;
 }
 
@@ -68,14 +72,14 @@ nav {
     align-items: center;
     text-align: center;
     gap: 10px;
-    margin-right: -60px;  
+    margin-right: 20px;
     width: 50%;
     /* height: 10vh; */
     font-size: 15px;
 }
 
-.signin2{
-    width: 20%;
+.signin2 {
+    width: 45%;
     text-decoration: none;
     border: 1px solid white;
     border-radius: 10px;
@@ -86,8 +90,8 @@ nav {
     justify-content: center;
     text-align: center;
 }
-.freeacc{
-    width: 40%;
+.freeacc {
+    width: 215px;
     text-decoration: none;
     border-radius: 10px;
     background-color: white;
@@ -100,20 +104,26 @@ nav {
 
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
     width: 500px;
+    /* height: 30vh; */
     background-color: white;
     left: -258px;
     top: 35px;
-    border: 1px solid;
     padding: 30px 30px;
     border-radius: 20px;
+    z-index: 100;
     position: absolute;
     display: none;
     gap: 20px;
+    transition: max-height 0.1s ease-out, padding 0.1s ease-out;
+}
 
+.dropdown a {
+    /* padding-bottom: 40px; */
 }
 
 .dropdown:focus-within .dropdown-content {
@@ -145,6 +155,216 @@ nav {
     width: 220px;
     /* width: 400px; */
 }
+.lists{
+    display: none;
+    /* width: 50%; */
+    height: 30px;
+    /* border: 1px solid; */
+}
+.menu-btn {
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* position: fixed; */
+    top: 10px;
+    right: 10px;
+    /* z-index: 1000; */
+    border-radius: 4px;
+    user-select: none;
+}
+.menu-btn:hover{
+    background-color:  rgb(6,155,64);
+    color: white;
+}
+.topic{
+    font-size: 18px;
+}
+#menuToggle {
+    display: none;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -600px;
+    min-width: 350px;
+    width: max-content;
+    height: 100%;
+    background-color: white;
+    padding-top: 40px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+/* Slide-in effect when the checkbox is checked */
+#menuToggle:checked+.menu-btn+.side-menu {
+    left: 0;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+.cancel-btn:hover{
+    color: rgb(6,155,64);
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.dropdown2 li{
+    border-bottom: 1px solid white;
+}
+
+.side-menu ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.side-menu ul li a:hover {
+    color: rgb(6,155,64);
+}
+
+.dropdown2 {
+    display: none;
+    padding-left: 20px;
+}
+
+.side-menu ul li a:focus-within+.dropdown2,
+.side-menu ul li:focus-within .dropdown2 {
+    display: block;
+}
+
+.signin1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.signin3 {
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 10px;
+    color: black;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.freeacc2 {
+    width: 100%;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    padding-left: 20px;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+    .side-menu ul li {
+        padding: 10px;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-btn {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    .side-menu {
+        min-width: 100%;
+    }
+
+    .side-menu ul li {
+        padding: 8px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    .logos img{
+       min-width: 60%;
+       margin-left: -30px;
+    }
+}
+@media (max-width: 990px) {
+    .signin {
+        flex-direction: column;
+        /* Stack signin buttons */
+        gap: 10px;
+        /* Space between buttons */
+        display: none;
+    }
+    .home{
+        display: none;
+    }
+    .lists{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+@media (max-width: 1115px) {
+    nav {
+        padding: 18px 50px;
+    }
+    .page1 {
+        padding: 0px 0%;
+    }
+}
+
 
 /*///////////////////////////////////////////////*/
 
@@ -343,7 +563,7 @@ nav {
 
 .page3{
     background-color:  rgb(16,178,89);
-    /* height: 30vh; */
+    height: 70vh;
     max-width: 100%;
     padding: 60px 180px;
     background-image: url(./happy-people\ \(1\).png);
@@ -354,6 +574,11 @@ nav {
 .page3 img{
     cursor: text;
     max-width: 100%;
+}
+@media (max-width: 700px){
+    .page3{
+        display: none;
+    }
 }
 .page4{
     padding: 80px 215px;

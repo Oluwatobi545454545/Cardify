@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    outline: 1px solid black;        
+    /* outline: 1px solid black;         */
     font-family: 'U8-Regular', Tahoma, Verdana, sans-serif;
 }
 
@@ -104,7 +104,6 @@ nav {
 
 .dropdown-content {
     width: 500px;
-    /* height: 30vh; */
     background-color: white;
     left: -258px;
     top: 35px;
@@ -114,12 +113,7 @@ nav {
     position: absolute;
     display: none;
     gap: 20px;
-    /* justify-content: center; */
-    /* align-items: center; */
-}
 
-.dropdown a {
-    /* padding-bottom: 40px; */
 }
 
 .dropdown:focus-within .dropdown-content {
@@ -330,10 +324,19 @@ nav {
         flex-wrap: wrap;
     }
     .longboxes, .longboxes2, .longboxes3{
-        /* margin-top: 70px; */
+        background-position: 25px 150px;    
+        height: 80vh;
+    }
+    .longboxes2{
+        background-position: 25px 240px;    
+
+    }
+    .longboxes{
+        background-position: 25px 260px;    
+
     }
     .longboxes b, .longboxes2 b, .longboxes3 b{
-        margin-top: 70px;
+        /* margin-top: 70px; */
     }
 }
 /*////////////////////////////////////////*/
@@ -341,17 +344,23 @@ nav {
 .page3{
     background-color:  rgb(16,178,89);
     /* height: 30vh; */
+    max-width: 100%;
     padding: 60px 180px;
     background-image: url(./happy-people\ \(1\).png);
     background-repeat: no-repeat;
     background-position: 750px 0px;
     background-size: contain;
 }
+.page3 img{
+    cursor: text;
+    max-width: 100%;
+}
 .page4{
     padding: 80px 215px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    width: 100%;
 }
 .questions {
     /* width: 400px; */
@@ -389,8 +398,38 @@ nav {
     color: white;
     border-radius: 20px;
 }
+@media (max-width: 1110px){
+    .page4{
+        flex-direction: column;
+        padding: 0px 0px;
+    }
+    .page4 p{
+        width: 100%;
+    }
+    .questions{
+        width: 100%;
+    }
+    .accordion{
+        width: 100%;
+    }
+    .accordion2{
+        margin-right: 0px;
+    }
+    .charges{
+        gap: 100px;
+    }
+}
+@media (max-width: 1115px){
+    .page4{
+        padding: 80px 20px;
+    }
+    .faq2b{
+        width: 100%;
+    }
+}
 .accordion {
-    max-width: 500px;
+    /* max-width: 500px; */
+    width: 100%;
     /* margin: 0 auto; */
 }
 
@@ -423,6 +462,7 @@ nav {
     overflow: hidden;
     transition: max-height 0.1s ease-out, padding 0.1s ease-out;
     padding: 0 15px;
+    text-align: justify;
     color: rgb(62, 76, 89);
 }
 
@@ -456,7 +496,7 @@ nav {
 .faq2b{
     font-size: 40px;
     margin-bottom: 20px;
-    width: 60%;
+    /* width: 60%; */
 }
 .questions2 p{
     width: 95%;
@@ -474,7 +514,15 @@ nav {
     border-radius: 20px;
 }
 .accordion2{
-    margin-right: -30px;
+    /* margin-right: -50px; */
+    width: 100%;
+}
+.accordion2 img{
+    max-width: 100%;
+}
+.accordionf img{
+    /* max-width: 100%; */
+
 }
 .lowcharges{
     display: flex;
@@ -491,7 +539,10 @@ nav {
 .charges{
     display: flex;
     gap: 50px;
+    min-width: 100%;
 }
+/*//////////////////////////////////////////////*/
+/*//////////////////////////////////////////////*/
 .page9{
     padding: 80px 215px;
     flex-direction: column;
@@ -499,19 +550,25 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    max-width: 100%;
 }
 .page9 b{
     text-align: center;
     font-size: 30px;
     margin-bottom: 40px;
 }
+.youtube{
+    max-width: 100%;
+}
 .youtube iframe{
     border-radius: 20px;
+    max-width: 100%;
 }
 .last{
-    width: 100%;
-    height: 18vh;
+    /* width: 100%; */
+    /* height: 18vh; */
     border-radius: 20px;
+    padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,6 +578,7 @@ nav {
 .plastic{
     border: 1px solid white;
     padding: 15px;
+    display: flex;
     border-radius: 25px;
     background-color: rgba(97,201,143, 0.5) ;
 }
@@ -544,7 +602,31 @@ nav {
     color: white;   
     margin-bottom: 10px;
 }
+@media (max-width: 768px){
+    .plastic{
+        display: none;
+    }
+}
+@media (max-width: 913px){
+    .last{
+        flex-direction: column;
+        width: 100%;
+    }
+    .plastic{
+        gap: 50px;
+        justify-content: center;
+        width: 100%;
+    }
+    .lasttext{
+        width: 100%;
+    }
+}
+@media (max-width: 1115px){
+    .page9{
+        padding: 80px 15px;
 
+    }
+}
 /*////////////////////////////////*/
 /*////////////////////////////////*/
 

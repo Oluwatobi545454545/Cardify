@@ -604,7 +604,9 @@ nav {
         margin-bottom: 20px;
         overflow-x: hidden;
     }
-
+    body{
+        overflow-x: hidden;
+    }
     .testimonials {
         gap: 0;
         margin-top: 20px;

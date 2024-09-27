@@ -602,6 +602,7 @@ nav {
         height: 0;
         width: 700%;
         margin-bottom: 20px;
+        overflow-x: none;
     }
 
     .testimonials {
@@ -1320,7 +1321,10 @@ nav {
     border-radius: 10px;
     max-width: 100%;
 }
-
+.playy{
+    text-decoration: none;
+    color: black;
+}
 .date {
     color: rgb(175, 171, 169);
     margin-top: 10px;
@@ -1359,7 +1363,7 @@ nav {
 .youtubebig {
     /* width: 875px; */
     max-width: 875px;
-    height: 363px;
+    /* height: 363px; */
     border: 1px solid rgb(221, 221, 221);
     border-radius: 15px;
     display: flex;

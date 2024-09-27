@@ -566,6 +566,7 @@ nav {
     align-items: center;
     margin: auto;
     margin-bottom: 100px;
+    /* border: 1px solid; */
 }
 
 .firsthr {
@@ -585,11 +586,13 @@ nav {
     align-items: center;
     text-align: center;
     gap: 130px;
-    max-width: 100px;
+    width: 100%;
+    /* border: 1px solid; */
 }
 
 .testimonials hr {
     width: 0px;
+    max-width: 100%;
     margin-top: -1px;
     border-left: 1px solid rgb(16, 178, 89);
     height: 22vh;
@@ -604,13 +607,20 @@ nav {
         margin-bottom: 20px;
         overflow-x: hidden;
     }
+    .page2{
+        overflow-x: hidden;
+    }
     body{
+        /* overflow-x: hidden; */
+    }
+    .verified{
         overflow-x: hidden;
     }
     .testimonials {
         gap: 0;
         margin-top: 20px;
         flex-direction: column;
+        overflow-x: hidden;
     }
 
     .firsthr {
